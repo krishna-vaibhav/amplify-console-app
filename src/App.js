@@ -4,8 +4,8 @@ import Amplify, { API, graphqlOperation } from 'aws-amplify'
 import { createTodo } from './graphql/mutations'
 import { listTodos } from './graphql/queries'
 import { withAuthenticator } from '@aws-amplify/ui-react'
-import awsExports from "./aws-exports";
-Amplify.configure(awsExports);
+import config from './aws-exports';
+Amplify.configure(config);
 
 const initialState = { name: '', description: '' }
 
